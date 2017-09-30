@@ -9,8 +9,6 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
         .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
         .Value;
 
-
-
     // Get request body
     dynamic data = await req.Content.ReadAsAsync<object>();
 
